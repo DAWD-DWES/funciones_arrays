@@ -18,13 +18,13 @@
                 <td><!-- Escribe tu código aquí --></td>
             </tr>
             <tr>
-                <td><p>Elimina el elemento correspondiente al índice 3 de $DAW1 y muestra el nuevo contenido</p></td>
+                <td><p>Elimina el elemento correspondiente al índice 3 de $DAW1 y muestra el nuevo contenido. Reorganiza el array para que no se queden huecos en los índices.</p></td>
             </tr>
             <tr>
                 <td><!-- Escribe tu código aquí --></td>
             </tr>
             <tr>
-                <td><p>Añade de nuevo el elemento correspondiente al índice 3 de $DAW1 y muestra el nuevo contenido</p></td>
+                <td><p>Añade de nuevo el elemento eliminado y muestra el nuevo contenido</p></td>
             </tr>
             <tr>
                 <td><!-- Escribe tu código aquí --></td>
@@ -197,6 +197,12 @@
             </tr>
             <tr>
                 <td><p>Muestra la duración del módulo de Desarrollo Web en Entorno Servidor (DWES) contenido en el array $DAWTri</p></td>
+            </tr>
+            <tr>
+                <td><!-- Escribe tu código aquí --></td>
+            </tr>
+            <tr>
+                <td><p>Construye un array bidimensional, a partir del array $DAWTri, con los valores de horas máximas y mínimas y la suma de las horas de los módulos</p></td>
             </tr>
             <tr>
                 <td><!-- Escribe tu código aquí --></td>
