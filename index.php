@@ -19,28 +19,38 @@
                     $DAW1 = array('Bases de Datos', 'Entornos de Desarrollo', 'Formación y Orientación Laboral', 'Lenguaje de Marcas y Sistemas de Gestión de Información',
                         'Programación', 'Sistemas Informáticos');
                     echo "Contenido de DAW1: ";
+                    echo '<pre>';
                     print_r($DAW1);
+                    echo '</pre>';
                     ?>
                 </td>
             </tr>
             <tr>
-                <td><p>Elimina el elemento correspondiente al índice 3 de $DAW1 y muestra el nuevo contenido</p></td>
+                <td><p>Elimina el elemento correspondiente al índice 3 de $DAW1 y muestra el nuevo contenido. Reorganiza el array para que no se queden huecos en los índices.</p></td>
             </tr>
             <tr>
                 <td><?php
                     unset($DAW1[3]);
                     echo "Contenido de DAW1: ";
+                    echo '<pre>';
                     print_r($DAW1);
+                    echo '</pre>';
+                    $DAW1 = array_values($DAW1);
+                    echo '<pre>';
+                    print_r($DAW1);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
-                <td><p>Añade de nuevo el elemento correspondiente al índice 3 de $DAW1 y muestra el nuevo contenido</p></td>
+                <td><p>Añade de nuevo el elemento eliminado y muestra el nuevo contenido</p></td>
             </tr>
             <tr>
                 <td><?php
-                    $DAW1[3] = 'Lenguaje de Marcas y Sistemas de Gestión de Información';
+                    $DAW1[] = 'Lenguaje de Marcas y Sistemas de Gestión de Información';
                     echo "Contenido de DAW1: ";
+                    echo '<pre>';
                     print_r($DAW1);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
@@ -50,9 +60,13 @@
                 <td><?php
                     $primerosModulosDAW1 = array_slice($DAW1, 0, 3);
                     echo "Contenido de DAW1: ";
+                    echo '<pre>';
                     print_r($DAW1);
+                    echo '</pre>';
                     echo "<br>Primeros módulos de DAW1: ";
+                    echo '<pre>';
                     print_r($primerosModulosDAW1);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
@@ -60,11 +74,15 @@
             </tr>
             <tr>
                 <td><?php
-                    $ultimosmodulosDAW1 = array_splice($DAW1, -2);
+                    $ultimosModulosDAW1 = array_splice($DAW1, -2);
                     echo "Contenido de DAW1: ";
+                    echo '<pre>';
                     print_r($DAW1);
+                    echo '</pre>';
                     echo "<br>Últimos módulos de DAW1: ";
-                    print_r($ultimosmodulosDAW1);
+                    echo '<pre>';
+                    print_r($ultimosModulosDAW1);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
@@ -72,9 +90,12 @@
             </tr>
             <tr>
                 <td><?php
-                    array_splice($DAW1, count($DAW1), 0, $ultimosmodulosDAW1);
+                    $ultimosModulosDAW1 = array_splice($DAW1, -2);
+                    array_splice($DAW1, count($DAW1), 0, $ultimosModulosDAW1);
                     echo "Contenido de DAW1: ";
+                    echo '<pre>';
                     print_r($DAW1);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
@@ -87,7 +108,9 @@
                     $DAW2 = ['Desarrollo Web en Entorno Cliente', 'Desarrollo Web en Entorno Servidor', 'Despliegue de Aplicaciones', 'Diseño de interfaces web',
                         'Empresa e Iniciativa Emprendedora', 'Inglés Técnico', 'Proyecto de Desarrollo de Aplicaciones Web', 'Formación en Centros de Trabajo'];
                     echo "Contenido de DAW2: ";
+                    echo '<pre>';
                     print_r($DAW2);
+                    echo '</pre>';
                     ?>
                 </td>
             </tr>
@@ -97,8 +120,10 @@
             <tr>
                 <td><?php
                     $DAW = array_merge($DAW1, $DAW2);
-                    echo "Contenido de DAW: '";
+                    echo "Contenido de DAW: ";
+                    echo '<pre>';
                     print_r($DAW);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
@@ -113,7 +138,9 @@
                         'Programación', 'Sistemas Informáticos', 'Acceso a Datos', 'Desarrollo de Interfaces', 'Programación de Servicios y Procesos',
                         'Sistemas de Gestión Empresarial', 'Empresa e Iniciativa Emprendedora', 'Inglés Técnico', 'Proyecto de Desarrollo de Aplicaciones Multiplataforma', 'Formación en Centros de Trabajo'];
                     echo "Contenido de DAM: ";
+                    echo '<pre>';
                     print_r($DAM);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
@@ -123,7 +150,9 @@
                 <td><?php
                     $DAWDAM = array_unique(array_merge($DAW, $DAM));
                     echo "Contenido de DAWDAM: ";
+                    echo '<pre>';
                     print_r($DAWDAM);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
@@ -142,7 +171,9 @@
                 <td><?php
                     $DAM2 = array_diff($DAWDAM, $DAW1);
                     echo "Contenido de DAM2: ";
+                    echo '<pre>';
                     print_r($DAM2);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
@@ -151,8 +182,10 @@
             <tr>
                 <td><?php
                     $DAMyDAW = array_intersect($DAW, $DAM);
-                    echo "Los módulos comunes son: ";
+                    echo "Los módulos comunes a DAW y DAM son: ";
+                    echo '<pre>';
                     print_r($DAMyDAW);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
@@ -180,7 +213,9 @@
                 <td><?php
                     rsort($DAW);
                     echo "Los módulos ordenados son: ";
+                    echo '<pre>';
                     print_r($DAW);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
@@ -190,7 +225,9 @@
                 <td><?php
                     asort($DAM);
                     echo "Los módulos ordenados son: ";
+                    echo '<pre>';
                     print_r($DAM);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
@@ -209,7 +246,9 @@
                         'DAW' => 'Despliegue de Aplicaciones', 'DIW' => 'Diseño de interfaces web',
                         'EIE' => 'Empresa e Iniciativa Emprendedora', 'IT' => 'Inglés Técnico', 'PR' => 'Proyecto de Desarrollo de Aplicaciones Web', 'FCT' => 'Formación en Centros de Trabajo'];
                     echo "Contenido de DAWAsoc: ";
+                    echo '<pre>';
                     print_r($DAWAsoc);
+                    echo '</pre>';
                     ?>
                 </td>
             </tr>
@@ -219,13 +258,17 @@
             <tr>
                 <td><?php
                     $DAWAbrev = array_keys($DAWAsoc);
+                    echo "Claves de DAWAsoc: ";
+                    echo '<pre>';
+                    print_r($DAWAbrev);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
                 <td><p>Comprueba que alguna de las abreviaturas sea 'BD' en el array $DAWAsoc</p></td>
             </tr>
             <tr>
-                <td>    <?php
+                <td><?php
                     $clavecontenida = array_key_exists('BD', $DAWAsoc);
                     echo ($clavecontenida) ? "La clave está en DAWAsoc" : "La clave no está en DAWAsoc";
                     ?></td>
@@ -237,7 +280,9 @@
                 <td><?php
                     ksort($DAWAsoc);
                     echo "Contenido de DAWAsoc ordenado: ";
+                    echo '<pre>';
                     print_r($DAWAsoc);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
@@ -257,7 +302,9 @@
                         'DAW' => ['Despliegue de Aplicaciones', 85], 'DIW' => ['Diseño de interfaces web', 115],
                         'EIE' => ['Empresa e Iniciativa Emprendedora', 65], 'IT' => ['Inglés Técnico', 40], 'PR' => ['Proyecto de Desarrollo de Aplicaciones Web', 30], 'FCT' => ['Formación en Centros de Trabajo', 370]];
                     echo "Contenido de DAWBi: ";
+                    echo '<pre>';
                     print_r($DAWBi);
+                    echo '</pre>';
                     ?>
                 </td>
             </tr>
@@ -267,8 +314,8 @@
             <tr>
                 <td><?php
                     echo "Información del ciclo DAW: <br>";
-                    foreach ($DAWBi as $abrev => $moduloInfo) {
-                        echo "$abrev : $moduloInfo[1] <br>";
+                    foreach ($DAWBi as $abrev => $moduloData) {
+                        echo "$abrev : $moduloData[1] <br>";
                     }
                     ?></td>
             </tr>
@@ -288,9 +335,11 @@
                 <td><?php
                     $DAWNombres = array_column($DAWBi, 0);
                     $DAWDuraciones = array_column($DAWBi, 1);
-                    array_multisort($DAWDuraciones, SORT_ASC, $DAWNombres, SORT_ASC, $DAWBi);
+                    array_multisort($DAWDuraciones, SORT_ASC, $DAWNombres, SORT_DESC, $DAWBi);
                     echo "Contenido de DAWBi ordenado: ";
+                    echo '<pre>';
                     print_r($DAWBi);
+                    echo '</pre>';
                     ?></td>
             </tr>
             <tr>
@@ -310,7 +359,9 @@
                             'DAW' => ['Despliegue de Aplicaciones', 85], 'DIW' => ['Diseño de interfaces web', 115],
                             'EIE' => ['Empresa e Iniciativa Emprendedora', 65], 'IT' => ['Inglés Técnico', 40], 'PR' => ['Proyecto de Desarrollo de Aplicaciones Web', 30], 'FCT' => ['Formación en Centros de Trabajo', 370]]];
                     echo "Contenido de DAWMulti ordenado: ";
+                    echo '<pre>';
                     print_r($DAWTri);
+                    echo '</pre>';
                     ?>
                 </td>
             </tr>
@@ -336,6 +387,26 @@
                     ?>
                 </td>
             </tr>
+            <tr>
+                <td><p>A partir del array $DAWTri construye otro array bidimensional con los valores de horas máximas y mínimas y la suma de las horas de los módulos de cada curso. Utiliza
+                        los índices asociativos "Max", "Min" y "Sum" para almacenar los valores.</p></td>
+            </tr>
+            <tr>
+                <td><?php
+                    $DAWMaxMin = [];
+                    foreach ($DAWTri as $index => $cursoData) {
+                        $max = max(array_column($cursoData, 1));
+                        $min = min(array_column($cursoData, 1));
+                        $sum = array_sum(array_column($cursoData, 1));
+                        $DAWMaxMin[$index] = ['Max' => $max, 'Min' => $min, 'Sum' => $sum];
+                    }
+                    echo '<pre>';
+                    print_r($DAWMaxMin);
+                    echo '</pre>';
+                    ?>
+                </td>
+            </tr>
+
         </table>
     </body>
 </html>
