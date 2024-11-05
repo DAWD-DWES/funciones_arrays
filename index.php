@@ -142,6 +142,12 @@
                 <td><!-- Escribe tu código aquí --></td>
             </tr>
             <tr>
+                <td><p>Recorre el array $DAWAsoc mostrando una lista con las abreviaturas y los nombres de los módulos</p></td>
+            </tr>
+            <tr>
+                <td><!-- Escribe tu código aquí --></td>
+            </tr>
+            <tr>
                 <td><p>Ordena el array asociativo $DAWAsoc por orden alfabético ascendente de sus claves. Muestra el array $DAWAsoc ordenado</p></td>
             </tr>
             <tr>
