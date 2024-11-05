@@ -90,7 +90,6 @@
             </tr>
             <tr>
                 <td><?php
-                    $ultimosModulosDAW1 = array_splice($DAW1, -2);
                     array_splice($DAW1, count($DAW1), 0, $ultimosModulosDAW1);
                     echo "Contenido de DAW1: ";
                     echo '<pre>';
@@ -169,7 +168,7 @@
             </tr>
             <tr>
                 <td><?php
-                    $DAM2 = array_diff($DAWDAM, $DAW1);
+                    $DAM2 = array_diff($DAM, $DAW1);
                     echo "Contenido de DAM2: ";
                     echo '<pre>';
                     print_r($DAM2);
@@ -265,12 +264,13 @@
                     ?></td>
             </tr>
             <tr>
-                <td><p>Comprueba que alguna de las abreviaturas sea 'BD' en el array $DAWAsoc</p></td>
+                <td><p>Recorre el array $DAWAsoc mostrando una lista con las abreviaturas y los nombres de los módulos</p></td>
             </tr>
             <tr>
                 <td><?php
-                    $clavecontenida = array_key_exists('BD', $DAWAsoc);
-                    echo ($clavecontenida) ? "La clave está en DAWAsoc" : "La clave no está en DAWAsoc";
+                    foreach ($DAWAsoc as $DAWAbrev => $DAWNombre) {
+                        echo "$DAWAbrev: $DAWNombre </br>";
+                    }
                     ?></td>
             </tr>
             <tr>
